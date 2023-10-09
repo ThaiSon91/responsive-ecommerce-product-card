@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box">
+        <div class="image-container">
+          <div class="big-image">
+            <img src="images/1500x1500.jpg.webp" alt="" />
+          </div>
+          <div class="small-image">
+            <img class="active" src="images/den.jpg" alt="" />
+            <img src="images/xanh-duong.jpg" alt="" />
+            <img src="images/xanh-bac-ha.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="content">
+          <h3 class="title">Xiaomi Redmi Note 12 pro</h3>
+          <div class="price">5,250,000 ₫</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            quibusdam nobis suscipit, quidem eaque in cupiditate non eveniet
+            nesciunt quos ad dolores facilis assumenda perspiciatis veritatis
+            voluptatum ab debitis rem.
+          </p>
+          <form action="">
+            <div class="drop-down">
+              <span>Size : </span>
+              <select name="" id="">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="extra large">Extra large</option>
+              </select>
+
+              <span>Color : </span>
+              <select name="" id="">
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+
+            <div class="quantity">
+              <span>Quantity : </span>
+              <input type="number" value="1" />
+            </div>
+          </form>
+          <a href="#"
+            ><button class="btn">
+              <i class="fas fa-shopping-cart"></i> Add To Cart
+            </button></a
+          >
+          <span class="stock"><i class="fas fa-check"></i>In Stock</span>
+          <div class="share">
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+            <a href="">Pinterest</a>
+            <a href="">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".small-image img").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+
+          let image = $(this).attr("src");
+          $(".big-image img").attr("src", image);
+        });
+      });
+    </script>
+  </body>
+</html>
